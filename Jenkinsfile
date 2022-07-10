@@ -19,7 +19,7 @@ pipeline{
                     jdk: '1.8.0_202"',
                     properties: [],
                     reportBuildPolicy: 'ALWAYS',
-                    results: [[path: '/home/qa/jenkins/workspace/Automtion-Project-run-tests/']]
+                    results: [[path: '/c/Users/kirill/allureResult/']]
             ])
     }
     }
