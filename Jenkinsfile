@@ -3,7 +3,7 @@ pipeline{
 	stages{
 		stage("Pull Latest Image"){
 			steps{
-				  docker pull darkklin/finalproject
+				  "docker pull darkklin/finalproject"
 			}
 		}
 		stage("Run Test"){
