@@ -1,18 +1,18 @@
 version: "3"
 services:
-  TestNGWeb:
+  commerce-web-module:
     image: darkklin/finalproject
-    container_name: TestNGWeb
+    container_name: commerce-web-module
     environment:
       - HUB_HOST=192.168.56.1
-      - MODULE=TestNGWeb.xml
+      - MODULE=commerce-web-module.xml
     volumes:
       - /c/home/qa/jenkins/workspace/Automtion-Project-run-tests/allure-results:/usr/share/selenium-docker/allure-results
-  TestNGApi:
+  map-api-module:
     image: darkklin/finalproject
-    container_name: TestNGApi
+    container_name: map-api-module
     environment:
       - HUB_HOST=192.168.56.1
-      - MODULE=TestNGApi.xml
+      - MODULE=map-api-module.xml
     volumes:
       - /c/home/qa/jenkins/workspace/Automtion-Project-run-tests/allure-results:/usr/share/selenium-docker/allure-results
