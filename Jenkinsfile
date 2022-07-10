@@ -3,20 +3,20 @@ pipeline{
 	stages{
 		stage("Pull Latest Image"){
 			steps{
-				sh "docker pull darkklin/finalproject"
+				bat "docker pull darkklin/finalproject"
 			}
 		}
 		stage("Run Test"){
 			steps{
-				sh "docker-compose up TestNGWeb TestNGApi"
+				bat "docker-compose up TestNGWeb TestNGApi"
 			}
 		}
 	}
 	post{
 		always{
 			archiveArtifacts artifacts: 'output/**'
-			sh "docker-compose down"
-			sh "sudo rm -rf output/"
+			bat "docker-compose down"
+			bat "sudo rm -rf output/"
 		}
 	}
 }
