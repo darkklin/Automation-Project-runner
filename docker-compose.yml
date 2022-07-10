@@ -1,0 +1,14 @@
+version: "3"
+services:
+  TestNGWeb:
+    image: darkklin/finalproject
+    container_name: TestNGWeb
+    environment:
+      - HUB_HOST=192.168.56.1
+      - MODULE=TestNGWeb.xml
+  TestNGApi:
+    image: darkklin/finalproject
+    container_name: TestNGApi
+    environment:
+      - HUB_HOST=192.168.56.1
+      - MODULE=TestNGApi.xml
