@@ -16,3 +16,11 @@ services:
       - MODULE=map-api-module.xml
     volumes:
       - /c/home/qa/jenkins/workspace/Automtion-Project-run-tests/allure-results:/usr/share/selenium-docker/allure-results
+  search-duck-module:
+    image: darkklin/finalproject
+    container_name: search-duck-module
+    environment:
+      - HUB_HOST=192.168.56.1
+      - MODULE=search-duck-module.xml
+    volumes:
+      - /c/home/qa/jenkins/workspace/Automtion-Project-run-tests/allure-results:/usr/share/selenium-docker/allure-results
