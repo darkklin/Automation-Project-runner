@@ -11,6 +11,20 @@ pipeline{
 				bat "docker-compose up TestNGWeb TestNGApi"
 			}
 		}
+				stage("reports"){
+			steps {
+			script {
+            allure([
+                    includeProperties: false,
+                    jdk: '1.8.0_202"',
+                    properties: [],
+                    reportBuildPolicy: 'ALWAYS',
+                    results: [[path: '/home/qa/jenkins/workspace/Automtion-Project-run-tests/']]
+            ])
+    }
+    }
+		}
+		
 	}
 	post{
 		always{
