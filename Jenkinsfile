@@ -8,7 +8,7 @@ pipeline{
 		}
 		stage("Run Test"){
 			steps{
-				bat "docker-compose up commerce-web-module map-api-module search-duck-module"
+				bat "docker-compose up commerce-web-module map-api-module search-duck-module commWeb-functional-module"
 			}
 		}
 				stage("reports"){

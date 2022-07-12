@@ -5,6 +5,7 @@ services:
     container_name: commerce-web-module
     environment:
       - HUB_HOST=192.168.56.1
+      - BROWSER=chrome
       - MODULE=commerce-web-module.xml
     volumes:
       - /c/home/qa/jenkins/workspace/Automtion-Project-run-tests/allure-results:/usr/share/selenium-docker/allure-results
@@ -22,5 +23,14 @@ services:
     environment:
       - HUB_HOST=192.168.56.1
       - MODULE=search-duck-module.xml
+    volumes:
+      - /c/home/qa/jenkins/workspace/Automtion-Project-run-tests/allure-results:/usr/share/selenium-docker/allure-results
+  commWeb-functional-module:
+    image: darkklin/finalproject
+    container_name: commWeb-functional-module
+    environment:
+      - HUB_HOST=192.168.56.1
+      - BROWSER=chrome
+      - commWeb-functional-module.xml
     volumes:
       - /c/home/qa/jenkins/workspace/Automtion-Project-run-tests/allure-results:/usr/share/selenium-docker/allure-results
