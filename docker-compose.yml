@@ -25,12 +25,12 @@ services:
       - MODULE=search-duck-module.xml
     volumes:
       - /c/home/qa/jenkins/workspace/Automtion-Project-run-tests/allure-results:/usr/share/selenium-docker/allure-results
-  commWeb-functional-module:
+  commWeb-regression-module:
     image: darkklin/finalproject
-    container_name: commWeb-functional-module
+    container_name: commWeb-regression-module
     environment:
       - HUB_HOST=192.168.56.1
       - BROWSER=chrome
-      - MODULE=commWeb-functional-module.xml
+      - MODULE=commWeb-regression-module.xml
     volumes:
       - /c/home/qa/jenkins/workspace/Automtion-Project-run-tests/allure-results:/usr/share/selenium-docker/allure-results
